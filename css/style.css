@@ -5,9 +5,11 @@
 
 .videoHead{
 	width:100%;
-	height:40px;
+	height:70px;
 	background:#E8E4DF;
-	position:absolute;
+	box-sizing:border-box;
+	padding:15px;
+	/*position:absolute;*/
 }
 .videoHeadLogo{
 	font-size:70px;
@@ -42,105 +44,264 @@
 	float: left;
 	margin: 9.5px -32px;
 }
-.videoMain{
-	width:70%;
-	height:85%;
+
+/*用户信息*/
+.userInformation{
+	float:right;
+	height:40px;
+	width:30%;
+	position:relative;
+}
+
+.userInformation p.information{
+	height:40px;
+	width:50%;
 	position:absolute;
+}
+.userInformation  h4{
+	color:#999;
+	margin:12px 0 0 43px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	width:30%;
+}
+.userInformation img{
+	width:40px;
+	height:40px;
+	border-radius:20px;
+	overflow:hidden;
+}
+
+.userInformation span{
+	color: #fff;
+	display: block;
+	float: left;
+	font-size: 40px;
+	position:;
+}
+
+.userInformation span.uploadSub{	
+	margin: -27px 0 0 55%;
+}
+.userInformation span.logoutSub{
+	margin: -40px 0 0 75%;
+}
+
+
+.videoMain{
+	width:1024px;
+	position:relative;
 	top:0;bottom:0;left:0;right:0;
 	margin:auto;
+
+	transition:all 0.6s ease;
+	-o-transition:all 0.6s ease;
+	-moz-transition:all 0.6s ease;
+	-webkit-transition:all 0.6s ease;
 }
 .videoMain ul{
 	height: 100%;
 	position: relative;
 	width: 100%;
+	transition:all 0.6s ease;
+	-o-transition:all 0.6s ease;
+	-moz-transition:all 0.6s ease;
+	-webkit-transition:all 0.6s ease;
 }
 
 .videoMain ul li{
 	display:block;
 	float:left;
+	opacity:0;
+	cursor:pointer;
 	box-sizing:border-box;
+	position:relative;
+	transition:all 0.65s ease;
+	-o-transition:all 0.65s ease;
+	-moz-transition:all 0.65s ease; 
+	-webkit-transition:all 0.65s ease;
+	-moz-transform:scale(0);
+	-o-transform:scale(0);
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform-origin:left left;
+	-moz-transform-origin:left left;
 }
+
+/*鼠标移动到li这里的样式*/
+
+.videoMain ul li:hover{
+	transform-origin:0 0 !important;
+	transform: rotateY(10deg) !important;
+	-webkit-transform: rotateY(10deg) !important;	
+	-moz-transform: rotateY(10deg) !important;	
+}
+
+.videoMain ul li:hover span{
+	margin-top:-30px;
+	opacity:0.6;
+}
+.videoMain ul li:hover h3{
+	opacity:0.6;
+	margin-top:40px
+}
+
 .videoMain ul li span{
+	color:#FFFFFF;
+	display:block;
+	font-size:40px;
+	width:40px;
+	height:40px;
+	margin:-20px;
+	top:50%;
+	left:50%;
+	opacity:1;
+	position:absolute;
+
+	-moz-transition:margin 0.86s ease-in-out,opacity 1.2s ease;
+}
+.videoMain ul li h3{
 	color:#FFFFFF;
 	display:block;
 	margin-top:30px;
 	text-align:center;
-	font-size:40px;
-}
-.videoMain ul li h3{
-	color:#FFFFFF;
+	top:50%;
+	width:100%;
+	position:absolute;
+	-moz-transition:margin 0.86s ease-in-out,opacity 1.2s ease;
 }
 /*热门*/
-.videoHotPatch{
-	width:42%;
-	height:30%;
-	margin:2.5% 0 0 2%;
+.patch1{
+	width:400px;
+	height:200px;
+	margin:30px 0 0;
 	background:-moz-linear-gradient(left,#2771EA,#4093E1);
+	background:-webkit-linear-gradient(left,#2771EA,#4093E1);
+	background:-o-linear-gradient(left,#2771EA,#4093E1);
+	background:-ms-linear-gradient(left,#2771EA,#4093E1);
 }
 
 /*猜你喜欢*/
-.videoGuessPatch{
-	width:20%;
-	height:30%;
-	background:#cca;
-	margin:2.5% 0 0 2%;
+.patch2{
+	width:250px;
+	height:150px;
+	margin:30px 0 0 10px;
 	background:-moz-linear-gradient(left,#018A18,#04A420);
+	background:-webkit-linear-gradient(left,#018A18,#04A420);
+	background:-o-linear-gradient(left,#018A18,#04A420);
+	background:-ms-linear-gradient(left,#018A18,#04A420);
 }
 
 /*新的*/
-.videoNewPatch{
-	width:30%;
-	height:30%;
-	background:#123455;
-	margin:2.5% 0 0 2%;
+.patch3{
+	width:344px;
+	height:220px;
+	margin:30px 0 0 10px;
 	background:-moz-linear-gradient(left,#AB193E,#B9214A);
+	background:-webkit-linear-gradient(left,#AB193E,#B9214A);
+	background:-o-linear-gradient(left,#AB193E,#B9214A);
+	background:-ms-linear-gradient(left,#AB193E,#B9214A);
 }
 
 /*分类*/
-.videoClassIfyPatch{
-	width:20%;
-	height:64.5%;
-	background:green;
-	margin:2.5% 0 0 2%;
+.patch4{
+	width:200px;
+	height:400px;
+	margin:-10px 0 0;
 	background:-moz-linear-gradient(top,#5035A8,#1F3B6D);
+	background:-webkit-linear-gradient(top,#5035A8,#1F3B6D);
+	background:-o-linear-gradient(top,#5035A8,#1F3B6D);
+	background:-ms-linear-gradient(top,#5035A8,#1F3B6D);
 }
 
 /*喜欢的 & 收藏的*/
-.videoLikePatch,.videoHistoryPatch{
-	width:20%;
-	height:30%;
-	margin:2.5% 0 0 2%;
-}
-
-.videoLikePatch{
+.patch5{
+	width:190px;
+	height:190px;
+	margin:-10px 0 0 10px;
 	background:-moz-linear-gradient(left,#D34628,#D65830);
+	background:-webkit-linear-gradient(left,#D34628,#D65830);
+	background:-o-linear-gradient(left,#D34628,#D65830);
+	background:-ms-linear-gradient(left,#D34628,#D65830);
 }
-
-.videoHistoryPatch{
+.patch6{
+	width:250px;
+	height:240px;
+	margin:-60px 0 0 10px;
 	background:-moz-linear-gradient(left,#5DA221,#77BC47);
+	background:-webkit-linear-gradient(left,#5DA221,#77BC47);
+	background:-o-linear-gradient(left,#5DA221,#77BC47);
+	background:-ms-linear-gradient(left,#5DA221,#77BC47);
 }
 
-.video1Patch{
-	height:30%;
-	width:30%;
-	margin:2.5% 0 0 2%;
+.patch7{
+	height:210px;
+	width:344px;
+	margin:10px 0 0 10px;
 	background:-moz-linear-gradient(left,#2771EA,#4093E1);
+	background:-webkit-linear-gradient(left,#2771EA,#4093E1);
+	background:-o-linear-gradient(left,#2771EA,#4093E1);
+	background:-ms-linear-gradient(left,#2771EA,#4093E1);
 }
 
-.video3Patch,.video2Patch{
-	height:30%;
-	width:36%;
-	margin:2.5% 0 0 2%;
-}
-
-.video2Patch{
+.patch8{
+	height:200px;
+	width:220px;
+	margin:-30px 0 0 10px;
 	background:-moz-linear-gradient(left,#C42140,#CE2A4A);
+	background:-webkit-linear-gradient(left,#C42140,#CE2A4A);
+	background:-o-linear-gradient(left,#C42140,#CE2A4A);
+	background:-ms-linear-gradient(left,#C42140,#CE2A4A);
 }
 
-.video3Patch{
+.patch9{
+	height:200px;
+	width:220px;
+	margin:-30px 0 0 10px;
+	background:-moz-linear-gradient(left,#D34628,#D65830);
+	background:-webkit-linear-gradient(left,#D34628,#D65830);
+	background:-o-linear-gradient(left,#D34628,#D65830);
+	background:-ms-linear-gradient(left,#D34628,#D65830);
+}
+
+.patch10{
+	width:344px;
+	height:160px;
+	margin:10px 0 0 10px;
 	background:-moz-linear-gradient(left,#DA8614,#E3A119);
+	background:-webkit-linear-gradient(left,#DA8614,#E3A119);
+	background:-o-linear-gradient(left,#DA8614,#E3A119);
+	background:-ms-linear-gradient(left,#DA8614,#E3A119);
 }
 
 
 
 /*首页样式结束*/
+
+/*内容展示*/
+.videoContent{
+    box-sizing: border-box;
+    margin-left: 260px;
+    padding-top: 30px;
+    position: relative;
+}
+
+/*request 中 videoContent.html 样式*/
+.videoWarpCard{
+	position:absolute;
+	width:100%;
+}
+
+.videoCard{
+	background:pink;
+	height:200px;
+	float:left;
+	margin:1%;
+	width:31.3333%;
+}
+
+.videoCard video{
+	height:100%;
+	width:100%;
+}

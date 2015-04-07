@@ -14,40 +14,74 @@
 		</span>
 		<div class="userInformation">
 			<p class="information">
-				<img src="">
+				<img src="images/index/user.jpg">
 			</p>
+			<h4>cheong kin pui</h4>
+			<span class="icon uploadSub"></span>
+			<span class="icon logoutSub"></span>
 		</div>
 	</div>
 	<div class="videoMain">
 		<ul>
-			<li class="videoHotPatch">
-				<span class="icon"></span>
+			<li class="videoHotPatch patch1">
+				<span class="icon"></span>
+				<h3 class="iconDescription">最新发布</h3>
 			</li>
-			<li class="videoGuessPatch">
+			<li class="videoGuessPatch patch2">
 				<span class="icon"></span>
+				<h3 class="iconDescription">我会喜欢</h3>
 			</li>
-			<li class="videoNewPatch">
-				<span class="icon"></span>
+			<li class="videoNewPatch patch3">
+				<span class="icon"></span>
+				<h3 class="iconDescription">热度最高</h3>
 			</li>
-			<li class="videoClassIfyPatch">
+			<li class="videoClassIfyPatch patch4">
 				<span class="icon"></span>
+				<h3 class="iconDescription">详细分类</h3>
 			</li>
-			<li class="videoLikePatch">
+			<li class="videoLikePatch patch5">
 				<span class="icon"></span>
+				<h3 class="iconDescription">我收藏的</h3>
 			</li>
-			<li class="videoHistoryPatch">
+			<li class="videoHistoryPatch patch6">
 				<span class="icon"></span>
+				<h3 class="iconDescription">我看过的</h3>
 			</li>
-			<li class="video1Patch">
+			<li class="video1Patch patch7">
 				<span class="icon"></span>
+				<h3 class="iconDescription">上升最快</h3>
 			</li>
-			<li class="video2Patch">
+			<li class="video2Patch patch8">
 				<span class="icon"></span>
+				<h3 class="iconDescription">排行榜</h3>
 			</li>
-			<li class="video3Patch">
+			<li class="video5Patch patch9">
+				<span class="icon"></span>
+				<h3 class="iconDescription">播放清单</h3>
+			</li>
+			<li class="video3Patch patch10">
 				<span class="icon"></span>
+				<h3 class="iconDescription">热度最高</h3>
 			</li>
 		</ul>	
 	</div>
+
+<script>
+window.onload = function(){
+	scale();
+}
+
+function scale(){
+	var e = document.getElementsByClassName("videoMain")[0].getElementsByTagName("li");
+	console.log(e.length);
+	for(var i = 0 ,l = e.length;i<l;i++){
+		e[i].style.transitionDelay = i*0.10+"s";
+		e[i].style.transform = "scale(1)";
+		e[i].style.opacity = "1";
+	}
+}
+</script>
+<script src="js/source/indexEffect.js"></script>
+<script src="js/default.js"></script>
 </body>
 </html>
