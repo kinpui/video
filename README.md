@@ -1,3 +1,2 @@
-this is hzti.net video system
-
-2015/4/23 add dell
+幼稚那时写的小小玩意
+==
